@@ -1,8 +1,47 @@
 import React from "react";
 import HeroImage from "../assets/HeroImage.jpg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Home = () => {
+  const socialMediaLinks = [
+    {
+      id: 1,
+      child: (
+        <>
+          <FaGithub size={30} />
+        </>
+      ),
+      name: "github",
+      href: "https://github.com/prajitlal4",
+      style: "rounded-tr-md",
+    },
+    {
+      id: 2,
+      child: (
+        <>
+          <FaLinkedin size={30} />
+        </>
+      ),
+      name: "linkedin",
+      href: "https://www.linkedin.com/in/prajit-lal-2756ba189/",
+      style: "rounded-tr-md",
+    },
+    {
+      id: 3,
+      name: "resume",
+      child: (
+        <>
+          <BsFillPersonLinesFill size={30} />
+        </>
+      ),
+      href: "/Prajit Resume pdf.pdf",
+      style: "rounded-br-md",
+    },
+  ];
+
   return (
     <div
       name="home"
@@ -16,6 +55,18 @@ const Home = () => {
           <p className="text-gray-400 py-4 max-w-md">
             asdasdasdasadssdasdadasd
           </p>
+          <ul className="flex">
+            {socialMediaLinks.map((link) => (
+              <li
+                key={link.id}
+                className="text-gray-400 pr-4 pb-4 hover:scale-105 duration-200 cursor-pointer"
+              >
+                <a href={link.href} target="_blank" rel="noreferrer">
+                  {link.child}
+                </a>
+              </li>
+            ))}
+          </ul>
           <div>
             <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500">
               Portfolio
