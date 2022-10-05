@@ -12,7 +12,10 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div name="about" className="w-full h-full bg-gray-900 text-white">
+    <div
+      id="portfolio"
+      className="w-full h-full bg-gray-900 text-white pb-40 pt-20"
+    >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="mt-20 pb-4">
           <p className="text-4xl font-bold inline border-gray-500">Portfolio</p>

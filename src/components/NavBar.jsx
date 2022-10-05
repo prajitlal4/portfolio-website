@@ -8,26 +8,21 @@ const NavBar = () => {
     {
       id: 1,
       name: "home",
+      href: "#home",
     },
     {
       id: 2,
       name: "about",
+      href: "#about",
     },
     {
       id: 3,
       name: "portfolio",
-    },
-    {
-      id: 4,
-      name: "experience",
-    },
-    {
-      id: 5,
-      name: "contact",
+      href: "#portfolio",
     },
   ];
 
-  const handleNavClick = () => {
+  const handleIconClick = () => {
     setNav(!nav);
   };
 
@@ -43,12 +38,12 @@ const NavBar = () => {
             key={link.id}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
           >
-            {link.name}
+            <a href={link.href}>{link.name}</a>
           </li>
         ))}
       </ul>
       <div
-        onClick={handleNavClick}
+        onClick={handleIconClick}
         className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
