@@ -62,12 +62,14 @@ const Home = () => {
             ))}
           </ul>
           <div>
-            <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500">
-              Portfolio
-              <span className="group-hover:rotate-90 duration-300">
-                <MdOutlineKeyboardArrowRight size={20} className="ml-1" />
-              </span>
-            </button>
+            <a href="#portfolio">
+              <button className="group text-white text-sm font-bold w-fit my-3 flex items-center rounded-md">
+                Portfolio
+                <span className="group-hover:rotate-90 duration-300">
+                  <MdOutlineKeyboardArrowRight size={20} className="ml-1" />
+                </span>
+              </button>
+            </a>
           </div>
         </div>
         <div>

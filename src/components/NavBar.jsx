@@ -27,9 +27,9 @@ const NavBar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex max-w-screen-lg justify-between items-center w-screen h-20 px-4 text-white bg-gray-900 fixed">
       <div>
-        <h1 className="text-4xl">Prajit</h1>
+        <h1 className="text-4xl font-bold">pl.</h1>
       </div>
 
       <ul className="hidden md:flex">

@@ -6,7 +6,9 @@ import Portfolio from "./components/Portfolio";
 function App() {
   return (
     <div>
-      <NavBar /> 
+      <div className="w-screen mx-auto flex justify-center">
+        <NavBar /> 
+      </div>
       <Home />
       <About />
       <Portfolio />
